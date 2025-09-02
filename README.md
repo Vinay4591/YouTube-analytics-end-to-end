@@ -54,7 +54,7 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 - Best upload times (day/hour)  
 - Days to trend vs publish lag  
 
-![Audience Dashboard](PowerBi Dashboard/youtube analytics 1.png)
+![Audience Dashboard]((https://github.com/Vinay4591/YouTube-analytics-end-to-end/blob/main/PowerBi%20Dashboard/youtube%20analytics%201.png?raw=true))
 
 ---
 
