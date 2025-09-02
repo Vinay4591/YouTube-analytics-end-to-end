@@ -9,7 +9,6 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 ## 📌 Architecture Overview
 
 ![AWS Architecture](architecture/aws_architecture.png)  
-*(Replace with your AWS diagram image)*
 
 **Flow**:  
 `YouTube API / CSV → S3 (Raw) → Lambda (JSON → Parquet) → Glue ETL → S3 (Cleaned → Analytics) → Glue Data Catalog → Athena → Power BI`
@@ -103,8 +102,3 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 - **ETL**: Python (boto3, pandas, pyarrow)  
 - **Visualization**: Power BI  
 - **Data Format**: JSON, CSV → Parquet  
-
----
-
-## 📂 Repository Structure
-
