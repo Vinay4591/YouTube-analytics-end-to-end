@@ -8,7 +8,7 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 
 ## 📌 Architecture Overview
 
-![AWS Architecture]()
+![AWS Architecture](https://github.com/Vinay4591/YouTube-analytics-end-to-end/blob/3507d6940e81c5b8132b1c039e2326009770a00d/architecture/Blank%20diagram.png)
 
 **Flow**:  
 `YouTube API / CSV → S3 (Raw) → Lambda (JSON → Parquet) → Glue ETL → S3 (Cleaned → Analytics) → Glue Data Catalog → Athena → Power BI`
