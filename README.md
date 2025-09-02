@@ -8,7 +8,8 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 
 ## 📌 Architecture Overview
 
-![AWS Architecture](architecture/aws_architecture.png)  
+![AWS Architecture]([PowerBi Dashboard/youtube analytics 1.png](https://github.com/Vinay4591/YouTube-analytics-end-toend/blob/81220efadb0dba6b7ebae4a9203a7a845735daed/PowerBi%20Dashboard/youtube%20analytics%201.png))  
+![AWS Architecture]()  
 
 **Flow**:  
 `YouTube API / CSV → S3 (Raw) → Lambda (JSON → Parquet) → Glue ETL → S3 (Cleaned → Analytics) → Glue Data Catalog → Athena → Power BI`
@@ -18,7 +19,7 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 ## ⚙️ Pipeline Components
 
 ### 🔹 Data Ingestion
-- **Sources**: YouTube API (JSON), CSV files  
+- **Sources**: Kaggle (JSON), CSV files  
 - **S3 Raw Bucket**: `youtube-analysis-raw-data-us-east-2-dev`  
 - **Event Trigger**: S3 → Lambda on file upload  
 
@@ -54,7 +55,7 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 - Best upload times (day/hour)  
 - Days to trend vs publish lag  
 
-![Audience Dashboard](dashboard/screenshots/audience_region.png)
+![Audience Dashboard](PowerBi Dashboard/youtube analytics 1.png)
 
 ---
 
@@ -63,7 +64,7 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 - Views over time (daily/quarterly trends)  
 - Engagement metrics (likes-to-dislike ratio, engagement rate, trending lag)  
 
-![Performance Dashboard](dashboard/screenshots/video_performance.png)
+![Performance Dashboard]([dashboard/screenshots/video_performance.png](https://github.com/Vinay4591/YouTube-analytics-end-to-end/blob/81220efadb0dba6b7ebae4a9203a7a845735daed/PowerBi%20Dashboard/youtube%20analytics%202.png))
 
 ---
 
