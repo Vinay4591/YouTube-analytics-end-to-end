@@ -48,21 +48,21 @@ This project demonstrates how to build a **cloud-native analytics pipeline** —
 ---
 
 ## 📊 Dashboards
-
-### 1. Audience & Region Insights
-- Regional share of views  
-- Best upload times (day/hour)  
-- Days to trend vs publish lag  
-
+  
+### 1. Content Performance
+- Top 10 trending videos by views  
+- Views over time (daily/quarterly trends)  
+- Engagement metrics (likes-to-dislike ratio, engagement rate, trending lag)
+  
 ![Audience Dashboard](https://github.com/Vinay4591/YouTube-analytics-end-to-end/blob/81220efadb0dba6b7ebae4a9203a7a845735daed/PowerBi%20Dashboard/youtube%20analytics%201.png)
 
 ---
 
-### 2. Content Performance
-- Top 10 trending videos by views  
-- Views over time (daily/quarterly trends)  
-- Engagement metrics (likes-to-dislike ratio, engagement rate, trending lag)  
-
+### 2. Audience & Region Insights
+- Regional share of views  
+- Best upload times (day/hour)  
+- Days to trend vs publish lag
+  
 ![Performance Dashboard](https://github.com/Vinay4591/YouTube-analytics-end-to-end/blob/81220efadb0dba6b7ebae4a9203a7a845735daed/PowerBi%20Dashboard/youtube%20analytics%202.png)
 
 ---
