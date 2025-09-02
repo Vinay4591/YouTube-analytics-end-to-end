@@ -1,2 +1,124 @@
 # YouTube-analytics-end-to-end
-End-to-End AWS Pipeline for YouTube Analytics with Power BI Dashboards
+An end-to-end data engineering and analytics pipeline that ingests YouTube category/region data, processes it using AWS services, and visualizes insights in Power BI dashboards.
+
+This project demonstrates how to build a cloud-native analytics pipeline — from raw JSON/CSV data to interactive BI dashboards.
+
+📌 Architecture Overview
+
+
+(Replace with your AWS diagram image)
+
+Flow:
+YouTube API / CSV → S3 (Raw) → Lambda (JSON → Parquet) → Glue ETL → S3 (Cleaned → Analytics) → Glue Data Catalog → Athena → Power BI
+
+⚙️ Pipeline Components
+🔹 Data Ingestion
+
+Sources: YouTube API (JSON), CSV files
+
+S3 Raw Bucket: youtube-analysis-raw-data-us-east-2-dev
+
+Event Trigger: S3 → Lambda on file upload
+
+🔹 Data Processing
+
+Lambda Function:
+
+Converts JSON → Parquet for efficient querying
+
+Validates schema and adds metadata (region, ingest date)
+
+AWS Glue Jobs:
+
+Cleaning & validation
+
+Transformation & ETL
+
+Automated schema discovery + Data Catalog updates
+
+🔹 Data Storage
+
+S3 Cleaned Bucket: youtube-analysis-cleaned-data-us-east-2-dev
+
+S3 Analytics Bucket: youtube-analysis-analytics-us-east-2-dev
+
+S3 Athena Results Bucket: youtube-analysis-raw-data-us-east-2-athena
+
+🔹 Analytics & Querying
+
+Athena SQL Queries on Parquet data (serverless, pay-per-query)
+
+Query results stored in dedicated Athena bucket
+
+🔹 Visualization
+
+Power BI dashboards connected to Athena via ODBC driver
+
+Interactive reports on views, likes, dislikes, trends, and engagement
+
+📊 Dashboards
+1. Audience & Region Insights
+
+Regional share of views
+
+Best upload times (day/hour)
+
+Days to trend vs publish lag
+
+2. Content Performance
+
+Top 10 trending videos by views
+
+Views over time (daily/quarterly trends)
+
+Engagement metrics (likes-to-dislike ratio, engagement rate, trending lag)
+
+🚀 Steps to Reproduce
+
+Set up S3 Buckets
+
+youtube-analysis-raw-data-us-east-2-dev
+
+youtube-analysis-cleaned-data-us-east-2-dev
+
+youtube-analysis-analytics-us-east-2-dev
+
+youtube-analysis-raw-data-us-east-2-athena
+
+Deploy Lambda Function
+
+Trigger: s3:ObjectCreated:* on raw bucket
+
+Code: lambda/lambda_json_to_parquet.py
+
+Run AWS Glue Jobs
+
+Job 1: Cleaning & validation
+
+Job 2: ETL & schema transformation
+
+Configure Glue Data Catalog
+
+Run crawler on cleaned/analytics buckets
+
+Create Athena tables from catalog
+
+Query with Athena
+
+Run SQL queries in sql/analytics_queries.sql
+
+Connect Power BI to Athena
+
+Use ODBC/Simba driver
+
+Build dashboards with dataset from Athena
+
+🛠️ Tech Stack
+
+AWS: S3, Lambda, Glue, Athena, Glue Data Catalog
+
+ETL: Python (boto3, pandas, pyarrow)
+
+Visualization: Power BI
+
+Data Format: JSON, CSV → Parquet
